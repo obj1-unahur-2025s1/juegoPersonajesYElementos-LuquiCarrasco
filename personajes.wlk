@@ -1,4 +1,5 @@
-import objetos.*
+import armas.*
+import elementos.*
 object luisa {
     var personajeActivo = floki
 }
@@ -8,8 +9,17 @@ object floki {
     var arma = ballesta
     
     method encontrar(elemento) {
-        // desarrollar el método
+        arma.atacar(elemento)   
     }
+
+    method arma() {
+        return arma
+    }
+
+    method arma(unArma) {
+        arma = unArma
+    }
+  
 }
 
 
@@ -18,5 +28,8 @@ object mario {
     
     method encontrar(elemento) {
         // desarrollar el método
+        
     }
+
+   
 }

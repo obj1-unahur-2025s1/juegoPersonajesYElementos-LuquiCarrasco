@@ -1,14 +1,3 @@
-object ballesta {
-    method esArma() {
-        return true
-    }
-}
-
-object jabalina {
-    method esArma() {
-        return true
-    }
-}
 
 object castillo {
     var defensaInicial = 150
@@ -23,6 +12,10 @@ object castillo {
 
     method defensa(unaDefensa) {
         defensaInicial = unaDefensa
+    }
+
+    method recibirAtaque(potencia) {
+        defensaInicial -= potencia
     }
 }
 
@@ -43,6 +36,12 @@ object aurora {
     method estaViva(consultaDeVida) {
         estaViva = consultaDeVida
     }
+
+    method recibirAtaque(potencia) {
+        if (potencia >= 10) {
+            estaViva = false
+        }
+    }
 }
 
 object tipa {
@@ -56,5 +55,10 @@ object tipa {
     method altura(unaAltura) {
         altura = unaAltura
     }
+
+    method recibirAtaque(potencia) {
+        
+    }
 }
+
 
