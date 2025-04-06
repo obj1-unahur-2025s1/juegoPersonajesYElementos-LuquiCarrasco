@@ -17,6 +17,15 @@ object castillo {
     method recibirAtaque(potencia) {
         defensaInicial -= potencia
     }
+    
+    method valor() {
+         return defensaInicial/5
+    }
+
+    method recibirTrabajo() {
+        defensaInicial = (defensaInicial + 20).min(200) 
+    }
+    
 }
 
 object aurora {
@@ -42,6 +51,14 @@ object aurora {
             estaViva = false
         }
     }
+
+    method valor() {
+        return 15
+    }
+
+    method recibirTrabajo() {
+    
+    }
 }
 
 object tipa {
@@ -57,8 +74,17 @@ object tipa {
     }
 
     method recibirAtaque(potencia) {
-        
+
+    }
+
+    method valor() {
+        return altura * 2
+    }
+
+    method recibirTrabajo() {
+        altura += 1
     }
 }
+
 
 
